@@ -25,7 +25,6 @@ if (module.hot) {
 document.querySelectorAll(".open-modal").forEach(el => {
     console.log("something was found");
     el.addEventListener("click", e => {
-        console.log("something was clicked");
         e.preventDefault();
         if (typeof modal == "undefined") {
             import(/* webpackChunkName: "modal" */'./modules/Modal').then(x => {
